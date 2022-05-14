@@ -1,5 +1,5 @@
 const TipResult = ({percent, bill, peoplenum}) => {
-    if( peoplenum == 0 || bill == 0){
+    if( peoplenum === 0 || bill === 0){
         return ( 
             <div className="tip-result">
                 <div>

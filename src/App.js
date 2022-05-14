@@ -1,8 +1,10 @@
 import { useState } from 'react';
 import TipResult from './TipResult.js';
 import TotalResult from './TotalResult.js';
+import iconDollar from './images/icon-dollar.svg'
+import iconPerson from './images/icon-person.svg'
 
-function App({}) {
+function App() {
 
   const [bill , setBill] = useState(0);
   const billin = (e)=>{
@@ -28,8 +30,7 @@ function App({}) {
     }
 
     const reset = () =>{
-      setBill(0)
-      setPeoplenum(0)
+      window.location.reload()
     }
 
   return (
@@ -38,12 +39,13 @@ function App({}) {
         <div className="input-area">
           <div className="bill-input">
             <span>Bill</span>
-            <input  placeholder="0" onInput={billin}/>
+            <img src={iconDollar} alt='mmmoney'></img>
+            <input min={1} placeholder="0" onInput={billin}/>
           </div>
           <div className="button-area" onClick={pickPercent} >
             <span>Select Tip %</span>
             <button value={0.05}>5%</button>
-            <button value={0.1}>10%</button>
+            <button autoFocus value={0.1}>10%</button>
             <button value={0.15}>15%</button>
             <button value={0.25}>25%</button>
             <button value={0.5}>50%</button>
@@ -51,6 +53,7 @@ function App({}) {
           </div>
           <div className="input-people-num">
             <span>Number of People</span>
+            <img src={iconPerson} alt='peoplee'></img>
             <input  placeholder="0" onInput={people}></input>
           </div>
         </div>
