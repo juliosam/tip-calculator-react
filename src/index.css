@@ -58,6 +58,16 @@ body{
   font-size: 12px;
 }
 
+.bill-input p {
+  position: absolute;
+  top: 3px;
+  right: 20px;
+  color: rgb(255, 83, 83);
+  font-size: 12px;
+}
+
+.error {display:none}
+
 .bill-input input{
   width: 270px;
   height: 35px;
@@ -71,7 +81,7 @@ body{
 
 .bill-input img{position: absolute; top: 38px; left: 12px; width: 9px;}
 
-.button-area{
+.percent-tip{
   width: 270px;
   height: 113px;
   display: flex;
@@ -81,12 +91,12 @@ body{
   align-content: space-between;
 }
 
-.button-area span{
+.percent-tip span{
   width: 250px;
   font-size: 12px;
 }
 
-.button-area button{
+.percent-tip button{
   width: 83px;
   height: 35px;
   border: none;
@@ -96,11 +106,12 @@ body{
   font-size: 17px;
 }
 
-.button-area button:focus{
+.percent-tip button:focus{
   background-color:hsl(172, 67%, 45%);
+  outline: none;
 }
 
-.button-area input {
+.percent-tip input {
   width: 80px;
   height: 35px;
   border: none;
@@ -120,6 +131,16 @@ body{
   margin: 25px 0 10px 0;
   font-size: 12px;
 }
+
+.input-people-num p {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  color: rgb(255, 83, 83);
+  font-size: 12px;
+}
+
+.error2{display: none;}
 
 .input-people-num input{
   width: 270px;
