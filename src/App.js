@@ -40,6 +40,8 @@ function App() {
 
   return (
     <div className="App">
+      <span className='spli'>SPLI</span>
+      <span className='tter'>TTER</span>
       <div className='content'>
         <div className="input-area">
           <div className="bill-input">

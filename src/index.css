@@ -4,7 +4,7 @@
   margin: 0;
   font-family: "Space Mono";
   font-weight: 700;
-  color: #333;
+  color: hsl(183, 100%, 15%);
   box-sizing: border-box;
 }
 
@@ -14,15 +14,22 @@ body{
 
 #root{
   height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .App{
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  flex-direction: column;
+  position: relative;
 }
+.App span{ display: block;}
 
+.spli {position:absolute; top: -70px; letter-spacing: 7px;}
+.tter {position:absolute; top: -50px; letter-spacing: 7px;}
 
 .content {
   width: 700px;
@@ -214,4 +221,104 @@ body{
   background-color: hsl(172, 67%, 45%);
   color: hsl(186, 14%, 43%);
   margin-top: 75px;
+}
+
+@media (max-width: 800px){
+  .App{
+    padding-top: 400px;
+    width: 375px;
+  }
+
+  .spli { top: 300px; font-size: 26px;}
+  .tter { top: 340px; font-size: 26px; }
+
+  .content{ 
+    margin: 0 auto;
+    width: 375px;
+    height: 820px;
+    flex-wrap: wrap;
+    padding: 20px 0 0 0;
+  }
+
+  .input-area{
+    padding: 0;
+    margin: 10px 32px;
+    width: 311px;
+  }
+
+  .output-area{
+    width: 311px;
+    margin: 102px 0 0 32px;
+    height: 275px;
+  }
+
+  .bill-input span{
+    font-size: 14px;
+  }
+  
+  .bill-input p {
+    top: 1px;
+    right: 0px;
+    font-size: 13px;
+  }
+  
+  .bill-input input{ width: 311px; height: 45px; font-size: 25px; padding-right: 20px;}
+
+  .bill-input img{position: absolute; top: 43px; left: 18px; width: 12px;}
+
+  .percent-tip{width: 311px; height: 200px;}
+  
+  .percent-tip span{ font-size: 14px;}
+  
+  .percent-tip button{
+    width: 147px;
+    height: 45px;
+    border-radius: 6px;
+    font-size: 24px;
+  }
+  
+  .percent-tip input {
+    width: 147px;
+    height: 45px;
+    border-radius: 6px;
+    font-size: 24px;
+    padding-right: 30px;
+  }
+
+  .input-people-num input{
+    width: 311px;
+    height: 45px;
+    border-radius: 6px;
+    font-size: 25px;
+    padding-right: 20px;
+  }
+
+  .input-people-num img{ top: 45px; left: 18px; width: 14px;}
+  
+  .input-people-num span{
+    margin: 27px 0 12px 0;
+    font-size: 14px;
+  }
+  
+  .input-people-num p {
+    top: 2px;
+    right: 0px;
+    font-size: 12px;
+  }
+
+  .output-area button{
+    height: 45px;
+    border-radius: 6px;
+    font-size: 19px;
+    margin-top: 35px;
+  }
+
+  .tip-result output{
+    font-size: 38px;
+  }
+
+  .total-result output{
+    font-size: 38px;
+  }
+  
 }
